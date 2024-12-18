@@ -17,13 +17,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <nav>
+      <body className={`${inter.className} pt-10`}>
+        {/* <nav>
           <ul className="flex gap-2 justify-between px-4 bg-blue-700">
             <li><Link href={'/'}>Home</Link></li>
             <li><Link href={'/about'}>About</Link></li>
           </ul>
-        </nav>
+        </nav> */}
         {children}
         </body>
     </html>
