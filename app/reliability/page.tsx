@@ -1,5 +1,12 @@
-import React from "react"
+import Hero from "@/components/hero"
+import reliability_bg from "@/public/reliability_bg.jpg"
 
 export default function Reliability() {
-  return <div>Reliability</div>
+  return (
+    <Hero
+      imgUrl={reliability_bg}
+      altTxt={"Reliability"}
+      content={"Reliability~~~~~"}
+    />
+  )
 }
