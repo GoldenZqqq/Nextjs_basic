@@ -1,9 +1,9 @@
 import type { Metadata } from "next"
-import { Comforter } from "next/font/google"
+import { Inter } from "next/font/google"
 import { AntdRegistry } from "@ant-design/nextjs-registry"
 import "./globals.css"
 
-const comforter = Comforter({ subsets: ["latin"], weight: "400" })
+const inter = Inter({ subsets: ["latin"], weight: "400" })
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${comforter.className}`}>
+      <body className={`${inter.className}`}>
         <AntdRegistry>{children}</AntdRegistry>
       </body>
     </html>
