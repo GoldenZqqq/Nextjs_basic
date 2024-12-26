@@ -11,18 +11,15 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({
-  children,
-  modal
-}: Readonly<{
+  children
+}: {
   children: React.ReactNode
-  modal: React.ReactNode
-}>) {
+}) {
   return (
     <html lang="en">
       <body className={`${inter.className}`}>
         <AntdRegistry>
           {children}
-          {modal}
         </AntdRegistry>
       </body>
     </html>
