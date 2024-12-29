@@ -126,3 +126,72 @@ export const revalidate = 3600 // 每小时重新验证
 ## 调试技巧
 
 使用 `console.log` 在服务端组件中调试时，可以在终端中查看输出。使用浏览器开发工具调试客户端组件。
+
+## Next.js 15 最新特性
+
+### 1. 服务器操作改进 (Server Actions Improvements)
+- 支持嵌套的服务器操作
+- 改进的表单处理机制
+- 优化的服务器端状态管理
+```typescript
+// 嵌套服务器操作示例
+async function parentAction() {
+  'use server'
+  await childAction()
+}
+```
+
+### 2. 部分预渲染 (Partial Prerendering) Beta
+- 将页面分为静态和动态部分
+- 提供更快的初始页面加载
+- 支持流式渲染动态内容
+```typescript
+// 部分预渲染示例
+export default async function Page() {
+  return (
+    <Suspense fallback={<Loading />}>
+      <AsyncComponent />
+    </Suspense>
+  )
+}
+```
+
+### 3. URL 状态管理
+- 使用 `useRouter` 和 `useSearchParams` 的增强功能
+- 改进的 URL 参数处理
+- 支持 URL 状态持久化
+
+### 4. 图片组件优化
+- 新的 `next/image` 优化策略
+- 改进的图片加载性能
+- 更智能的图片优化处理
+
+### 5. 开发者体验提升
+- 改进的错误提示
+- 更快的开发环境热重载
+- 更好的类型推断支持
+
+### 6. Turbopack 改进
+- 更快的编译速度
+- 更好的 HMR (热模块替换) 支持
+- 改进的缓存机制
+
+### 7. 内置字体系统增强
+- 支持更多字体提供商
+- 优化的字体加载策略
+- 改进的字体性能
+
+### 8. SEO 优化
+- 增强的元数据 API
+- 改进的静态生成支持
+- 更好的搜索引擎优化工具
+
+### 9. 安全性增强
+- 改进的 CORS 处理
+- 更强大的中间件功能
+- 内置的安全标头
+
+### 10. 性能监控
+- 内置的性能指标追踪
+- 改进的开发者工具集成
+- 更详细的性能分析
